@@ -1,0 +1,122 @@
+/* --- Контейнер форми --- */
+.contact-form-container {
+  width: 100%;
+  max-width: 28rem; /* 448px */
+  padding: 2rem; /* 32px */
+  background-color: #fff;
+  border-radius: 0.5rem; /* 8px */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Аналог space-y-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 24px */
+}
+
+/* --- Заголовок --- */
+.contact-form-title {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(31 41 55);
+}
+
+/* --- Тег <form> --- */
+.contact-form {
+  /* Аналог space-y-4 */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 16px */
+}
+
+/* --- Група (лейбл + інпут) --- */
+.form-group {
+  /* Контейнер для лейбла + інпут — оставим минимальный стиль */
+  display: block;
+}
+
+/* --- Лейбл --- */
+.form-label {
+  display: block;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  margin-bottom: 0.25rem; /* Додав невеликий відступ */
+}
+
+/* --- Поле вводу --- */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  border-width: 1px;
+  border-color: rgb(209 213 219);
+  border-radius: 0.375rem; /* 6px */
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 0 1px #3b82f6;
+  outline: none;
+}
+
+/* --- Контейнер для кнопок --- */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem; /* 12px, аналог space-x-3 */
+}
+
+/* --- Базовий стиль кнопки --- */
+.btn {
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  border-radius: 0.375rem; /* 6px */
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--focus-ring-color, #9ca3af);
+}
+
+/* --- Кнопка "Зберегти" (Primary) --- */
+.btn-primary {
+  color: #fff;
+  background-color: rgb(37 99 235); /* blue-600 */
+  --focus-ring-color: #3b82f6; /* blue-500 */
+}
+
+.btn-primary:hover {
+  background-color: rgb(29 78 216); /* blue-700 */
+}
+
+/* --- Кнопка "Відміна" (Secondary) --- */
+.btn-secondary {
+  color: rgb(55 65 81); /* gray-700 */
+  background-color: rgb(243 244 246); /* gray-100 */
+  border-color: rgb(209 213 219); /* Додав для чіткості */
+  --focus-ring-color: #6b7280; /* gray-500 */
+}
+
+.btn-secondary:hover {
+  background-color: rgb(229 231 235); /* gray-200 */
+}
+
+/* --- Ошибки --- */
+.input-error {
+  border-color: #ef4444; /* red-500 */
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15);
+}
+.error-text {
+  margin-top: 0.25rem;
+  color: #b91c1c; /* red-700 */
+  font-size: 0.8125rem; /* 13px */
+}
