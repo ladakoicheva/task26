@@ -10,7 +10,8 @@ function App() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await fetch("/contacts.json");
+        const url = `${import.meta.env.BASE_URL}contacts.json`;
+        const response = await fetch(url);
         const data = await response.json();
 
         setContacts(data);
