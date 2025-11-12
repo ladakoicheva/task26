@@ -10,8 +10,8 @@ function App() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const url = `${import.meta.env.BASE_URL}contacts.json`;
-        const response = await fetch(url);
+        
+        const response = await fetch("/task26/contacts.json");
         const data = await response.json();
 
         setContacts(data);
@@ -35,7 +35,7 @@ function App() {
   const handleCancelForm = () => {
     setShowList(true);
   };
-
+  
   return (
     <>
       <button onClick={() => setShowList(true)}>Contacts List</button>{" "}
